@@ -1,6 +1,6 @@
-# @zendesk/babel-plugin-react-displayname
+# @gadget-inc/babel-plugin-react-displayname
 
-![Jest test CI](https://github.com/zendesk/babel-plugin-react-displayname/workflows/Jest%20test%20CI/badge.svg)
+![Jest test CI](https://github.com/gadget-inc/babel-plugin-react-displayname/workflows/Jest%20test%20CI/badge.svg)
 
 > Automatically generate display names for React components
 
@@ -8,12 +8,12 @@
 
 Internal usage:
 ```
-yarn add @zendesk/babel-plugin-react-displayname
+yarn add @gadget-inc/babel-plugin-react-displayname
 ```
 
 Public usage: Copy `src/index.js` to a local file
 ```
-@zendesk/babel-plugin-react-displayname: "file:../path/to/file"
+@gadget-inc/babel-plugin-react-displayname: "file:../path/to/file"
 ```
 
 ## Why use this?
@@ -55,13 +55,13 @@ Img.displayName = "Img";
 Using npm:
 
 ```sh
-npm install --save-dev @zendesk/babel-plugin-react-displayname
+npm install --save-dev @gadget-inc/babel-plugin-react-displayname
 ```
 
 or using yarn:
 
 ```sh
-yarn add @zendesk/babel-plugin-react-displayname --dev
+yarn add @gadget-inc/babel-plugin-react-displayname --dev
 ```
 
 ## Usage
@@ -71,14 +71,14 @@ yarn add @zendesk/babel-plugin-react-displayname --dev
 Without options:
 ```json
 {
-  "plugins": ["@zendesk/babel-plugin-react-displayname"]
+  "plugins": ["@gadget-inc/babel-plugin-react-displayname"]
 }
 ```
 
 With options:
 ```json
 {
-  "plugins": ["@zendesk/babel-plugin-react-displayname", {
+  "plugins": ["@gadget-inc/babel-plugin-react-displayname", {
     "allowedCallees": {
       "react": ["createComponent"]
     }
