@@ -14,7 +14,6 @@ module.exports = declare((api, options) => {
   calleeModuleMapping.clear();
   Object.entries(options.allowedCallees || DEFAULT_ALLOWED_CALLEES).forEach(
     ([moduleName, methodNames]) => {
-      console.log("Setting up allowed call", moduleName, methodNames)
       methodNames.forEach((methodName) => {
         calleeModuleMapping.set(methodName, moduleName);
       });
@@ -32,12 +31,10 @@ module.exports = declare((api, options) => {
       },
       'FunctionExpression|ArrowFunctionExpression|ObjectMethod': function (path) {
         if (doesReturnJSX(types, path.node.body)) {
-          console.log("doesReturnJSX")
           addDisplayNamesToFunctionComponent(types, path);
         }
       },
       CallExpression(path) {
-        console.log("CallExpressionpath")
         if (isAllowedCallExpression(types, path)) {
           addDisplayNamesToFunctionComponent(types, path);
         }
