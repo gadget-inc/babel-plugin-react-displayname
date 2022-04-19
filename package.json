@@ -1,6 +1,6 @@
 {
   "name": "@gadget-inc/babel-plugin-react-displayname",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Babel plugin for automatic React display name generation",
   "main": "src/index.js",
   "files": ["src/index.js"],
